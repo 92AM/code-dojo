@@ -52,4 +52,24 @@ public class FizzBuzzTest {
 		// then
 		assertThat(result, equalTo("Fizz"));
 	}
+
+	@Test
+	public void shouldSay4WhenFourIsSupplied() {
+
+		// when
+		String result = FizzBuzz.checkFizzBuzz(4);
+
+		// then
+		assertThat(result, equalTo("4"));
+	}
+
+	@Test
+	public void shouldSayBuzzWhenFiveIsSupplied() {
+
+		// when
+		String result = FizzBuzz.checkFizzBuzz(5);
+
+		// then
+		assertThat(result, equalTo("Buzz"));
+	}
 }
