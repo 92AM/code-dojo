@@ -13,15 +13,23 @@ public class FizzBuzzTest {
 		assertThat("Fizz", equalTo("Fizz"));
 	}
 
-	@Test
-	public void shouldSay0FizzWhenZeroIsSupplied() {
-
-		// when
-		String result = FizzBuzz.checkFizzBuzz(0);
-
-		// then
-		assertThat(result, equalTo("0"));
-	}
+	// TODO : Fix me !
+//	@ParameterizedTest
+//	@MethodSource("invalidNumber")
+//	public void shouldSay0WhenZeroIsSupplied(int zero) {
+//
+//		// when
+//		// Invalid number number (i.e. 0) is passed in.
+//
+//		// then
+//		assertThatThrownBy(() -> FizzBuzz.checkFizzBuzz(zero))
+//				.isInstanceOf(IllegalArgumentException.class)
+//				.hasMessage("Zero is not a valid value in FizzBuzz.");
+//	}
+//
+//	static Stream<Arguments> invalidNumber() {
+//		return Stream.of(Arguments.of(0));
+//	}
 
 	@Test
 	public void shouldSay1WhenOneIsSupplied() {
@@ -71,5 +79,25 @@ public class FizzBuzzTest {
 
 		// then
 		assertThat(result, equalTo("Buzz"));
+	}
+
+	@Test
+	public void shouldSayFizzBuzzWhenFifteenIsSupplied() {
+
+		// when
+		String result = FizzBuzz.checkFizzBuzz(15);
+
+		// then
+		assertThat(result, equalTo("FizzBuzz"));
+	}
+
+	@Test
+	public void shouldSayFizzBuzzWhenThirtyIsSupplied() {
+
+		// when
+		String result = FizzBuzz.checkFizzBuzz(30);
+
+		// then
+		assertThat(result, equalTo("FizzBuzz"));
 	}
 }

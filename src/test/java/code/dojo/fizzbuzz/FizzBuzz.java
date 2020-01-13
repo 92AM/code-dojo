@@ -19,30 +19,11 @@ public final class FizzBuzz {
 
 	public static String checkFizzBuzz(int number) {
 
-		if (number == 0) {
-			return "0";
-		}
-
-		if (number == 1) {
-			return "1";
-		}
-
-		if (number == 2) {
-			return "2";
-		}
-
-		if (number == 3) {
-			return "Fizz";
-		}
-
-		if (number == 4) {
-			return "4";
-		}
-
-		if (number == 5) {
-			return "Buzz";
-		}
-
-		return "";
+		if (number == 0) throw new IllegalArgumentException("Zero is not a valid value in FizzBuzz.");
+		if (number == 1) return String.valueOf(number);
+		if (number % 3 == 0 && number % 5 == 0) return "FizzBuzz";
+		else if (number % 3 == 0) return "Fizz";
+		else if (number % 5 == 0) return "Buzz";
+		else return String.valueOf(number);
 	}
 }
